@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personalización de Productos</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Personalización de Productos</h1>
+  </header>
+
+  <section id="product-customization">
+    <div class="container">
+      <h2>Personaliza tu Producto</h2>
+      <form action="procesar_pedido.php" method="POST" enctype="multipart/form-data">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required><br><br>
+
+        <label for="contacto">Información de Contacto:</label>
+        <input type="text" id="contacto" name="contacto" placeholder="Correo electrónico, número de teléfono, red social, etc." required><br><br>
+
+        <label for="producto">Producto:</label>
+        <select id="producto" name="producto" required>
+          <option value="Taza">Taza</option>
+          <option value="Mouse Pad">Mouse Pad</option>
+          <option value="Otros">Otros</option>
+        </select><br><br>
+
+        <label for="foto_ejemplo">Foto de Ejemplo del Producto:</label>
+        <input type="file" id="foto_ejemplo" name="foto_ejemplo" accept="image/*" required><br><br>
+        
+        <label for="foto">Foto del Diseño a colocar en el producto:</label>
+        <input type="file" id="foto" name="foto" accept="image/*" required><br><br>
+
+        <label for="personalizacion">Detalles de Personalización:</label><br>
+        <textarea id="personalizacion" name="personalizacion" rows="4" cols="50" required></textarea><br><br>
+
+        <input type="submit" value="Enviar Pedido">
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 The Hand Artist. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+</body>
+</html>
